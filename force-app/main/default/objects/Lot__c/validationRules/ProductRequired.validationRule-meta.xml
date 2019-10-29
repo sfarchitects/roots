@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductRequired</fullName>
+    <active>true</active>
+    <description>Enforces the population of the Product field, which cannot be done with normal settings.</description>
+    <errorConditionFormula>Product__c = null</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Product is a required field.</errorMessage>
+</ValidationRule>

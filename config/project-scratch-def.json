@@ -1,0 +1,22 @@
+{
+	"orgName"  : "Neighborhood Roots",
+	"edition"  : "Developer",
+	"features" : [
+		"Communities",
+		"MultiCurrency"
+	],
+	"settings" : {
+		"communitiesSettings"         : {
+			"enableNetworksEnabled" : true
+		},
+		"languageSettings"            : {
+			"enableTranslationWorkbench" : true
+		},
+		"lightningExperienceSettings" : {
+			"enableS1DesktopEnabled" : true
+		},
+		"territory2Settings"          : {
+			"enableTerritoryManagement2" : true
+		}
+	}
+}
