@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood Roots Launcher</title>
+	<link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+<!-- Org -->
+<div class="slds-p-vertical_small header">
+	<img class="slds-m-vertical_small" src="images/th-academy-logo.png" alt="trailhead academy logo" width="200" />
+	<p class="slds-text-heading_large slds-m-top_medium uppercase">Neighborhood Roots Org</p>
+</div>
+<div class="slds-grid slds-wrap slds-grid_align-space slds-p-around_medium content slds-grid_vertical-stretch main">
+
+	<div class="slds-size_1-of-4 slds-box slds-p-horizontal_medium slds-m-bottom_xx-large slds-m-horizontal_medium tile">
+		<div>
+			<p class="slds-text-heading_small slds-p-vertical_xx-small slds-text-align_center">Starter Org</p>
+			<p class="slds-p-vertical_small">This org gives you a baseline org to work in for classes that use the Neighborhood Roots scenario.</p>
+		</div>
+		<div class="slds-grid slds-grid_align-space">
+			<a class="slds-button slds-button_brand"
+			   href="https://hosted-scratch.herokuapp.com/launch?template=https://github.com/sfarchitects/roots/tree/develop"
+			   target="_blank">Create Org</a>
+		</div>
+	</div>
+
+</div>
+
+<!-- Scenario -->
+<div class="slds-p-vertical_small header">
+	<p class="slds-text-heading_large slds-m-top_medium uppercase">Neighborhood Roots Scenario</p>
+</div>
+<div class="slds-grid slds-wrap slds-grid_align-space slds-p-around_medium content slds-grid_vertical-stretch main">
+
+	<div class="slds-size_9-of-12 slds-box slds-p-horizontal_medium slds-m-bottom_xx-large slds-m-horizontal_medium tile slds-text-body_regular">
+		<h2 class="slds-text-heading_medium">Project Overview</h2>
+		<p>Neighborhood Roots is in the business of sourcing and distributing agricultural products, connecting producers and consumers in a supply chain. Neighborhood Roots focuses on food agricultural products only, though it has considered a limited future expansion into fuels, fibers, and raw materials. Neighborhood Roots runs a two-sided marketplace:</p>
+		<ol>
+		<li>One side of the market are agricultural product producers. At a minimum these are businesses that NR purchases produce and other agricultural products from for resale. In addition, Neighborhood Roots has several programs that these producers can pay for such as support from the Neighborhood Roots science team, and product marketing.</li>
+		<li>The other side of the market are businesses and individuals that purchase agricultural products. Most of these customers are businesses, such as grocery stores, food wholesalers, co-ops, restaurants, and markets. Neighborhood Roots also sells direct to individuals through its online store and subscription box services. Currently there are about 60,000 commercial customers, and about 10,000 retail or individual customers in a pilot program. Selling to individual customers is a new expansion and is expected to be quite challenging logistically compared to the commercial customers buying in bulk. Neighborhood Roots is targeting having 200,000 retail customers within the first year of offering sales to self-service customers.</li>
+		</ol>
+
+		<p>Neighborhood Roots has made a commitment to using Salesforce.com to both replace some of their existing systems/processes as well as being the home of some net new features and projects they would like to develop. They are currently evaluating how to best utilize the Salesforce platform, and which parts of their existing business systems should be moved into Salesforce and which parts are best handled elsewhere.</p>
+
+		<h2 class="slds-text-heading_medium">Product Sourcing</h2>
+
+		<p>Neighborhood Roots has a cultivation team that is responsible for finding and landing new sources of products. They call and travel to potential producers to pitch them on working with Neighborhood Roots. There are about 5,000 active producers that Neighborhood Roots works with currently. Cultivation team members are assigned geographic regions as well as food verticals, for example a rep may be responsible for sourcing wine from vineyards in a certain region. Regions and verticals are updated and recalculated quarterly, and new ones are added as Neighborhood Roots expands. Currently cultivation team members report on their progress and findings at the end of each week. Neighborhood Roots hopes to move to a system where these reps are tracking their results as they go, so that producers are immediately onboarded and attended to by the logistics team and feel well taken-care-of.</p>
+
+		<p>After being acquired as a source of goods, agricultural product producers are managed by the logistics team, which is responsible for tracking and managing the supply chain of goods. The logistics team members are assigned to manage producers, as well as managing relationships with supply chain partners such as shipping and distribution companies. Part of what makes Neighborhood Roots special is their focus on connecting consumers to local producers. A heavy emphasis is placed on sourcing products from as geographically proximate location to the consumer as possible in order to take advantage of the social, environmental, and financial benefits. The logistics team works with producers to determine which products will be purchased, in what quantities, at what prices, and at what intervals. This can be a lengthy and involved process as it depends on existing local supply and demand, and the logistics team struggles with having actionable data to make purchasing decisions against.</p>
+
+		<h2 class="slds-text-heading_medium">Inventory</h2>
+
+		<p>Inventory management is a very important component of running Neighborhood Roots. Producers report in advance their expected products, availability dates, and quantities. These predictions are then trued up when the actual products are obtained, and shortages / overages are accounted for. Neighborhood Roots works hard to avoid spoilage, and attempts to have buyers earmarked for all agricultural products before they are purchased. Because Neighborhood Roots is onboarding new customers all the time, a degree of overpurchase is desired in order to have product readily available for new customers.</p>
+
+		<p>Neighborhood Roots manages their product supply chain with the idea of a lot, which is a finite amount of a specific product, purchased from a specific producer on a specific date. When producers report their expected goods, these are tentative lots. When the lots are purchased and the quantities and acquisition dates finalized, they are available lots. A customer order is satisfied with one or more available lots, depending on which products and what quantities a customer orders. It is quite common for a lot to be subdivided into orders for multiple customers.</p>
+
+		<p>Neighborhood Roots has built a custom system (RootTracker) over many years that manages this inventory and lot allocation. When an order is placed, the system looks at all available lots that match the desired products in the order, the physical location of those lots, and creates the best fit of orders to lots. Available lots are used first, then tentative lots. As time has progressed RootTracker has become harder and harder to make further changes to, since additional features seem to result in some unexpected and undesirable bugs cropping up.</p>
+
+		<h2 class="slds-text-heading_medium">Sales Processes</h2>
+
+		<p>Sometimes there are product pilots, where Neighborhood Roots is considering stocking a specific product and works with producers and select consumers to evaluate the product. Consumers in these pilots will see special available products for purchase that are not available to other consumers.</p>
+
+		<p>Neighborhood Roots has a wholesale sales team that works with distributors to handle bulk orders. Neighborhood Roots would like to develop a self-service portal where these larger-scale purchasers can log in, browse inventory, make purchasing commitments, and track their existing orders. Today these distributors are making these orders via email, or on the phone. Distributors are broken into tiers based on volume of purchases, and get discounts on products based on the tier they are in.</p>
+
+		<p>Neighborhood Roots has a retail sales team that finds and lands customer accounts for stores, restaurants, etc that will be purchasing produce. These customers are divided by geographic region and business type (restaurant vs grocery store, for example) and assigned to members of the retail sales team.</p>
+
+		<p>When customers place orders, if something is out of stock the order is partially fulfilled, and the out-of-stock portion of the order is placed in a fulfillment queue. Neighborhood Roots tracks these occurrences and can escalate heavily-demanded items to the logistics team to actively resolve. When this happens the logistics team both talks to existing producers to increase supplies and works alongside the cultivation team to find additional, new sources of these in-demand products.</p>
+
+		<p>Orders can be made for varying specificities of product. For example, an order can simply be for "iceberg lettuce", but it might also be for "iceberg lettuce from a specific farm". This depends on how well-known a particular producer and its products are, and the preferences of the buyer.</p>
+
+		<h2 class="slds-text-heading_medium">Additional Teams</h2>
+
+		<p>Neighborhood Roots has a science team that helps producers develop their businesses through better methods, product recommendations, etc. The science teams maintains a knowledge base that holds useful information about growing crops, raising livestock, and many other facets of production. Some science team members travel on-site to producers that have paid for on-the-ground consultations. Neighborhood Roots would like more producers to sign-up (and pay for) this in-person consultative service, as they feel it is a big value differentiator over their competitors when wooing agricultural product producers.</p>
+
+		<p>Neighborhood Roots maintains a call center and support staff that is divided into three teams: producer support, commercial customer support, and individual customer support. These support teams are assigned to smaller sub-teams that support specific languages as well as being divided into groups similarly to members of the other teams in the company (logistics, cultivation, science, and sales). The support teams in these sub-groups are supposed to share information with their related members of the other teams, but it has proven difficult in the past to keep people up to speed. It is not unusual for a sales person or logistics team member, for example, to be unaware of an existing support issue for a customer or producer they are working with.</p>
+
+		<h2 class="slds-text-heading_medium">Additional Considerations</h2>
+
+		<p>Neighborhood Roots is based in Europe, and works with customers in a variety of languages. Any data screens exposed to customers are expected to be available in English, Spanish, French, and German at a minimum. Neighborhood Roots must charge appropriate taxes for each of its orders based on the locations of the buyers.</p>
+
+		<p>Today Neighborhood Roots focuses on minimizing product shrinkage (spoilage) and efficient delivery of goods, but has struggled to gain appropriate insights into their sales and supply data that would support the ability to be more strategic in decisions about both product sourcing and customer acquisition / up-sell. For example, some existing suppliers offer products that Neighborhood Roots does not carry, but could, but is not sure how to evaluate. Also, the success or failure of different products seems connected both to geographic region and customer type, and Neighborhood Roots would like to do better micro-analysis and targeting to better tailor their offerings to customers.</p>
+
+		<p>One element that is important going forward will be the introduction of traceability. NR would like to be able to print a QR code on each delivered box to customers that will allow them to locate a traceability report online detailing the origins of each of the products in the box, their dates of harvest/manufacture, and other pertinent details.</p>
+	</div>
+
+</div>
+
+<div class="footer">
+
+</div>
+</body>
+</html>
